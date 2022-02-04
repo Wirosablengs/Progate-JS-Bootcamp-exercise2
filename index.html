@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Javascript DOM exercise 2</title>
+</head>
+<style>
+</style>
+<body>
+    <h1>Let's Play FizzBuzz!</h1>
+        <label><strong>Type a number between 1-100</strong></label>
+        <input type ="number" id="inputValue">
+        <input type ="submit" id="quantity" value="Click here!">
+    <p id="Result"></p>
+<script>
+    const inputNumber = document.getElementById("quantity");
+    inputNumber.addEventListener("click", displayResult);
+    function displayResult() {
+        let i = document.getElementById("inputValue").value;
+            if (i <= 0 || i> 100) {
+                document.getElementById("Result").innerHTML += "Invalid input<br>";
+            } else if (i % 15 === 0) {
+                document.getElementById("Result").innerHTML += "FizzBuzz<br>";
+            } else if (i % 3 === 0) {
+                document.getElementById("Result").innerHTML += "Fizz<br>";
+            } else if (i % 5 === 0 ) {
+                document.getElementById("Result").innerHTML += "Buzz<br>";
+            } else {
+                document.getElementById("Result").innerHTML += i + "<br>";
+            }             
+    }   
+</script>
+</body>
+</html>
